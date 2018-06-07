@@ -15,13 +15,13 @@ Ex:
 /opt/openoffice4/program/soffice -headless -nologo -nofirststartwizard -accept="socket,host=127.0.0.1,port=8100;urp" &
 ```
  
- Once you ran it. You can run the application:
+ Once you finished. You can run the application:
  
 ```shellscript
 mvn clean spring-boot:run -DskipTests
 ```
 
-## Running under a container [not working well]
+## Running under a container
 
 If you want to try running it under a container you can build it using maven.
 
@@ -34,3 +34,9 @@ mvn package -DskipTests docker:build
 # running
 docker-compose -f ./src/main/docker/docker-compose.yml up
 ```
+
+## Testing
+
+When running the application. You can try it using the swagger interface:
+
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
